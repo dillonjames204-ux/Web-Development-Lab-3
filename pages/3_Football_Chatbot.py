@@ -3,10 +3,10 @@ import os
 import streamlit as st
 from pydantic_ai import Agent
 
-# Give Pydantic AI your Gemini key from secrets.toml
+# Give Pydantic AI your Gemini key from secrets.toml (or the app's Secrets settings when deployed)
 os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
 
-# The Gemini model this app uses (google-gla = the free Gemini API key)
+# The Gemini model this app uses
 MODEL = "google:gemini-2.5-flash-lite"
 
 st.title("Georgia Tech Football Chatbot")
@@ -56,8 +56,8 @@ if prompt:
             reply = result.output
             st.session_state.history = result.all_messages()
         except Exception as error:
-            print("Chatbot error:", error)  # shows the real problem in your terminal
-            reply = "Sorry, something went wrong. Please try again."
+            print("Chatbot error:", error)  # shows in the terminal / Manage app logs
+            reply = f"Sorry, something went wrong: {error}"
         st.write(reply)
 
     st.session_state.messages.append({"role": "assistant", "content": reply})
