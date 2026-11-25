@@ -7,7 +7,7 @@ from pydantic_ai import Agent
 os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
 
 # The Gemini model this app uses (google-gla = the free Gemini API key)
-MODEL = "google:gemini-3.5-flash-lite"
+MODEL = "google:gemini-2.5-flash-lite"
 
 st.title("Georgia Tech Football Chatbot")
 
