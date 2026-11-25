@@ -5,8 +5,8 @@ st.title("Georgia Tech Football Analytics")
 
 # Assignment Data
 st.header("CS 1301")
-st.subheader("Team XX, Web Development - Section X")  # TODO: your team number and section
-st.subheader("Your Name, Partner Name")  # TODO: both names
+st.subheader("Web Development - Section D")
+st.subheader("Dillon James, Raghavi Nadarjan")
 
 # Introduction
 st.write("""

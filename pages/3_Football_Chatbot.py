@@ -6,8 +6,7 @@ from pydantic_ai import Agent
 # Give Pydantic AI your Gemini key from secrets.toml
 os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
 
-# "gemini-flash-latest" is a Gemini Flash alias that Pydantic AI recognizes.
-# If your Canvas setup page names a different model, put its name after "google-gla:".
+# The Gemini model this app uses (google-gla = the free Gemini API key)
 MODEL = "google:gemini-3.5-flash-lite"
 
 st.title("Georgia Tech Football Chatbot")
