@@ -2,5 +2,5 @@
 # List every module you import that isn't part of Python's standard library.
 # (Streamlit itself is installed automatically.)
 streamlit
-pydantic-ai-slim[google]
-google-genai
+pydantic-ai-slim[google]==2.73.0
+google-genai==2.34.0
